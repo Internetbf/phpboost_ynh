@@ -30,6 +30,15 @@ ynh_config_add_nginx
 ynh_config_add_phpfpm
 
 #=================================================
+# NGINX CONFIGURATION
+#=================================================
+ynh_script_progression "Execute installation of __APP__..."
+
+ynh_local_curl "/install/index.php?url=/database" "databaseForm_login=__DB_USER__" "databaseForm_password=__DB_PWD__" "databaseForm_schema=__DB_NAME__" #DB CURL
+ynh_local_curl "/install/index.php?url=/website" "websiteForm_name=My WebSite" #General setings CURL
+ynh_local_curl "/install/index.php?url=/admin" "adminForm_display_name=$phpboost_admin_user" "adminForm_email=$phpboost_admin_email" "adminForm_password=$phpboost_admin_psw" "adminForm_repeatPassword=$phpboost_admin_psw" #Admin CURL
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
