@@ -1,6 +1,14 @@
 #:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/tests.v1.schema.json
 test_format = 1.0
 
+# This is an additional test suite
+[nourl]
+
+    # On additional tests suites, you can decide to run only specific tests
+
+    only = ["install.nourl"]
+
+
 [default]
 	
 	[default.curl_tests]
