@@ -34,6 +34,8 @@ ynh_config_add_phpfpm
 if [ ynh_in_ci_tests ]; then
 ynh_script_progression "Tweek APP CI tests ..."
 	mv $install_dir/install $install_dir/install-old
+	mkdir $install_dir/install
+	echo "<?php echo 'Hello World'; ?>" > $install_dir/install/index.php
 fi
 
 #=================================================
