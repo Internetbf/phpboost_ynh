@@ -29,14 +29,28 @@ ynh_config_add_nginx
 # Create a dedicated PHP-FPM config
 ynh_config_add_phpfpm
 
-# Tweek APPCI test
+#Execute Installation
+ynh_script_progression "Installing $app ..."
 
-if [ ynh_in_ci_tests ]; then
-ynh_script_progression "Tweek APP CI tests ..."
-	mv $install_dir/install $install_dir/install-old
-	mkdir $install_dir/install
-	echo "<?php echo 'Hello World'; ?>" > $install_dir/install/index.php
-fi
+#(use the template file "conf/config.php" from the app's package)
+ynh_config_add --template="config.php" --destination="$install_dir/kernel/db/config.php" 
+
+#Populate DATABASE with "Fake" SQL
+ynh_script_progression "Populate DATABASE $db_name with Fake SQL ..."
+ynh_mysql_db_shell < /conf/phpboost_blank_install.sql
+
+ynh_script_progression "RUN the real instalation of $app ..."
+ynh_exec_as_app cd $install_dir
+ynh_exec_as_app  php phpboost install --db-pwd $db_pwd --db-user $db_user --ws-server $domain --ws-path $path --u-login $phpboost_admin --u-pwd $phpboost_pwd
+ynh_safe_rm $install_dir/install
+
+# Tweek APPCI test
+#if [ ynh_in_ci_tests ]; then
+#ynh_script_progression "Tweek APP CI tests ..."
+#	mv $install_dir/install $install_dir/install-old
+#	mkdir $install_dir/install
+#	echo "<?php echo 'Hello World'; ?>" > $install_dir/install/index.php
+#fi
 
 #=================================================
 # END OF SCRIPT

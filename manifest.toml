@@ -42,6 +42,22 @@ ram.runtime = "50M"
     [install.init_main_permission]
     type = "group"
     default = "visitors"
+	
+	[install.phpboost_admin]
+	ask.en = "PhpBoost admin Login"
+    help.en = "The Admin user"
+	ask.fr = "L'admin de votre PHPBoost"
+    help.fr = "L'utilisateur Administrateur"
+    type = "string"
+    default = "Admin"
+	
+	[install.phpboost_pwd]
+	ask.en = "PhpBoost admin password"
+    help.en = "The Admin password"
+	ask.fr = "Mot de passe d'administration"
+    help.fr = "Le mot de passe de l'Administrateur"
+    type = "password"
+    default = "My Super PWD for PHPBoost"
 
 [resources]
 
