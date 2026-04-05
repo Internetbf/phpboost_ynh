@@ -57,7 +57,7 @@ ram.runtime = "50M"
 	ask.fr = "Mot de passe d'administration"
     help.fr = "Le mot de passe de l'Administrateur"
     type = "password"
-    default = "My Super PWD for PHPBoost"
+    default = "My_Super_PWD_for_PHPBoost"
 
 [resources]
 
