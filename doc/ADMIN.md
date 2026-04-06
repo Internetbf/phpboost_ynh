@@ -1,0 +1,1 @@
+Before changing URL : Change the URL in PHPBoost ADMINISTRATION -> General configuration
