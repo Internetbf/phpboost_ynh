@@ -924,7 +924,7 @@ CREATE TABLE `phpboost_poll_voters` (
   `vote_timestamp` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_poll_voters` (`id`, `poll_id`, `voter_user_id`, `voter_ip`, `vote_timestamp`) VALUES (1,1,-1,'0.0.0.0',1775419345);
+INSERT INTO `phpboost_poll_voters` (`id`, `poll_id`, `voter_user_id`, `voter_ip`, `vote_timestamp`) VALUES (1,1,-1,'127.0.0.1',1775419345);
 DROP TABLE IF EXISTS `phpboost_search_index`;
 CREATE TABLE `phpboost_search_index` (
   `id_search` int(11) NOT NULL AUTO_INCREMENT,
