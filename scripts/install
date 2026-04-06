@@ -37,7 +37,8 @@ ynh_config_add --template="config.php" --destination="$install_dir/kernel/db/con
 
 #Populate DATABASE with "Fake" SQL
 ynh_script_progression "Populate DATABASE $db_name with Fake SQL ..."
-mysql --binary-mode 1
+#local database_name=${1:-$db_name}
+mysql --binary-mode
 ynh_mysql_db_shell < ../conf/phpboost_blank_install.sql
 
 ynh_script_progression "RUN the real instalation of $app ..."
