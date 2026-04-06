@@ -39,12 +39,9 @@ ynh_config_add --template="config.php" --destination="$install_dir/kernel/db/con
 ynh_script_progression "Populate DATABASE $db_name with Fake SQL ..."
 ynh_mysql_db_shell_binary-mode < ../conf/phpboost_blank_install.sql
 
-ynh_script_progression "RUN the real instalation of $app ..."
-cd $install_dir
-php phpboost
-php phpboost install
-php phpboost install --db-pwd $db_pwd --db-user $db_user --db-schema $db_name --ws-server https://$domain --ws-path $path --u-login $phpboost_admin --u-pwd $phpboost_pwd
-ynh_safe_rm $install_dir/install
+# RUN PHPBoost CLI Install with PHP
+ynh_script_progression "RUN the real instalation of $app with $app cli ..."
+phpboost_cli_install
 
 
 #=================================================

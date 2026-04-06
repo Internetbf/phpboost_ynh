@@ -19,3 +19,16 @@ ynh_mysql_db_shell_binary-mode() {
     #mysql "${default_character_set[@]}" -B "$database"
 	mysql "${default_character_set[@]}" -B "$database" --binary-mode -o 
 }
+
+phpboost_cli_install() {
+
+cd $install_dir
+
+#Exec PHPBoost CLI with PHP
+php phpboost
+php phpboost install # read current conf 
+php phpboost install --db-pwd $db_pwd --db-user $db_user --db-schema $db_name --ws-server https://$domain --ws-path $path --u-login $phpboost_admin --u-pwd $phpboost_pwd
+
+ynh_safe_rm $install_dir/install
+
+}
