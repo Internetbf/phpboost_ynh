@@ -30,5 +30,6 @@ php phpboost install # read current conf
 php phpboost install --db-pwd $db_pwd --db-user $db_user --db-schema $db_name --ws-server https://$domain --ws-path $path --u-login $phpboost_admin --u-pwd $phpboost_pwd
 
 ynh_safe_rm $install_dir/install
+ynh_safe_rm $install_dir/update
 
 }
