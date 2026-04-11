@@ -555,7 +555,7 @@ CREATE TABLE `phpboost_internal_authentication` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `login` (`login`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_internal_authentication` (`user_id`, `login`, `password`, `registration_pass`, `change_password_pass`, `connection_attemps`, `last_connection`, `approved`) VALUES (1,'internetbf','1f83071b40aa012b67fd6fb76a62de29c3db351f215811337f68d8a3a34daa46','','',0,1775419366,1);
+-- INSERT INTO `phpboost_internal_authentication` (`user_id`, `login`, `password`, `registration_pass`, `change_password_pass`, `connection_attemps`, `last_connection`, `approved`) VALUES (1,'internetbf','1f83071b40aa012b67fd6fb76a62de29c3db351f215811337f68d8a3a34daa46','','',0,1775419366,1);
 DROP TABLE IF EXISTS `phpboost_internal_authentication_failures`;
 CREATE TABLE `phpboost_internal_authentication_failures` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -644,7 +644,7 @@ CREATE TABLE `phpboost_member` (
   UNIQUE KEY `display_name` (`display_name`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_member` (`user_id`, `display_name`, `level`, `email`, `show_email`, `locale`, `theme`, `timezone`, `editor`, `unread_pm`, `posted_msg`, `registration_date`, `last_connection_date`, `user_groups`, `warning_percentage`, `delay_banned`, `delay_readonly`, `autoconnect_key`) VALUES (1,'internetbf',2,'internetbf@gmail.com',0,'french','base','Europe/Paris','BBCode',0,0,1775419366,0,'',0,0,0,'0b613fc5d3771608ec9aecabf4d3a36cdc6b9d2e63c147aa2cfc9cd30181d016');
+-- INSERT INTO `phpboost_member` (`user_id`, `display_name`, `level`, `email`, `show_email`, `locale`, `theme`, `timezone`, `editor`, `unread_pm`, `posted_msg`, `registration_date`, `last_connection_date`, `user_groups`, `warning_percentage`, `delay_banned`, `delay_readonly`, `autoconnect_key`) VALUES (1,'internetbf',2,'internetbf@gmail.com',0,'french','base','Europe/Paris','BBCode',0,0,1775419366,0,'',0,0,0,'0b613fc5d3771608ec9aecabf4d3a36cdc6b9d2e63c147aa2cfc9cd30181d016');
 DROP TABLE IF EXISTS `phpboost_member_extended_fields`;
 CREATE TABLE `phpboost_member_extended_fields` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
