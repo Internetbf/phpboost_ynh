@@ -900,7 +900,7 @@ CREATE TABLE `phpboost_poll` (
   KEY `id_category` (`id_category`),
   FULLTEXT KEY `title` (`title`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_poll` (`id`, `title`, `rewrited_title`, `author_user_id`, `creation_date`, `update_date`, `published`, `id_category`, `publishing_start_date`, `publishing_end_date`, `views_number`, `author_custom_name`, `thumbnail`, `question`, `answers_type`, `answers`, `votes`, `votes_number`, `countdown_display`, `close_poll`) VALUES (1,'Critique du site','critique-du-site',1,1775419345,0,1,1,0,0,0,'','default','Comment trouvez-vous notre site ?',1,'a:4:{s:9:"Supersite";a:2:{s:10:"is_default";b:0;s:5:"title";s:10:"Super site";}s:6:"Pasmal";a:2:{s:10:"is_default";b:0;s:5:"title";s:7:"Pas mal";}s:12:"Plutôtmoyen";a:2:{s:10:"is_default";b:0;s:5:"title";s:13:"Plutôt moyen";}s:3:"Bof";a:2:{s:10:"is_default";b:0;s:5:"title";s:3:"Bof";}}','a:4:{s:10:"Super site";i:15;s:7:"Pas mal";i:3;s:13:"Plutôt moyen";i:6;s:3:"Bof";i:0;}',24,0,0);
+-- INSERT INTO `phpboost_poll` (`id`, `title`, `rewrited_title`, `author_user_id`, `creation_date`, `update_date`, `published`, `id_category`, `publishing_start_date`, `publishing_end_date`, `views_number`, `author_custom_name`, `thumbnail`, `question`, `answers_type`, `answers`, `votes`, `votes_number`, `countdown_display`, `close_poll`) VALUES (1,'Critique du site','critique-du-site',1,1775419345,0,1,1,0,0,0,'','default','Comment trouvez-vous notre site ?',1,'a:4:{s:9:"Supersite";a:2:{s:10:"is_default";b:0;s:5:"title";s:10:"Super site";}s:6:"Pasmal";a:2:{s:10:"is_default";b:0;s:5:"title";s:7:"Pas mal";}s:12:"Plutôtmoyen";a:2:{s:10:"is_default";b:0;s:5:"title";s:13:"Plutôt moyen";}s:3:"Bof";a:2:{s:10:"is_default";b:0;s:5:"title";s:3:"Bof";}}','a:4:{s:10:"Super site";i:15;s:7:"Pas mal";i:3;s:13:"Plutôt moyen";i:6;s:3:"Bof";i:0;}',24,0,0);
 DROP TABLE IF EXISTS `phpboost_poll_cats`;
 CREATE TABLE `phpboost_poll_cats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -914,7 +914,7 @@ CREATE TABLE `phpboost_poll_cats` (
   `thumbnail` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_poll_cats` (`id`, `name`, `rewrited_name`, `c_order`, `special_authorizations`, `auth`, `id_parent`, `description`, `thumbnail`) VALUES (1,'Catégorie de test','categorie-de-test',1,0,'',0,'Elements basiques de démonstration','default');
+-- INSERT INTO `phpboost_poll_cats` (`id`, `name`, `rewrited_name`, `c_order`, `special_authorizations`, `auth`, `id_parent`, `description`, `thumbnail`) VALUES (1,'Catégorie de test','categorie-de-test',1,0,'',0,'Elements basiques de démonstration','default');
 DROP TABLE IF EXISTS `phpboost_poll_voters`;
 CREATE TABLE `phpboost_poll_voters` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -924,7 +924,7 @@ CREATE TABLE `phpboost_poll_voters` (
   `vote_timestamp` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_poll_voters` (`id`, `poll_id`, `voter_user_id`, `voter_ip`, `vote_timestamp`) VALUES (1,1,-1,'127.0.0.1',1775419345);
+-- INSERT INTO `phpboost_poll_voters` (`id`, `poll_id`, `voter_user_id`, `voter_ip`, `vote_timestamp`) VALUES (1,1,-1,'127.0.0.1',1775419345);
 DROP TABLE IF EXISTS `phpboost_search_index`;
 CREATE TABLE `phpboost_search_index` (
   `id_search` int(11) NOT NULL AUTO_INCREMENT,
@@ -964,8 +964,8 @@ CREATE TABLE `phpboost_sessions` (
   KEY `user_id` (`user_id`),
   KEY `timestamp` (`timestamp`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_sessions` (`user_id`, `session_id`, `token`, `timestamp`, `ip`, `location_script`, `location_title`, `cached_data`, `data`, `location_id`) VALUES (-1,'57e3075b871c8136e646c61790a2ced0a022e18f8cfff941f3a3e85151f50834','d914e9af1e933ff3',1775419366,'192.168.1.20','/phpboost/kernel/framework/ajax/user_xmlhttprequest.php','Erreur','a:16:{s:7:"user_id";i:-1;s:12:"display_name";s:7:"visitor";s:5:"level";i:-1;s:5:"email";N;s:10:"show_email";b:0;s:6:"locale";s:6:"french";s:5:"theme";s:4:"base";s:8:"timezone";s:12:"Europe/Paris";s:6:"editor";s:6:"BBCode";s:9:"unread_pm";i:0;s:17:"registration_date";i:0;s:20:"last_connection_date";i:1775419350;s:11:"user_groups";s:0:"";s:18:"warning_percentage";i:0;s:12:"delay_banned";i:0;s:14:"delay_readonly";i:0;}','a:0:{}','');
-INSERT INTO `phpboost_sessions` (`user_id`, `session_id`, `token`, `timestamp`, `ip`, `location_script`, `location_title`, `cached_data`, `data`, `location_id`) VALUES (1,'281fcabb255fdb8bc8a1157456dda557acd8a13bb830c39a6c55c8a5654b0c1e','17fe1c1bdf31b3ea',1775419704,'192.168.1.20','/phpboost/database/admin_database.php?action=backup','Gestion des tables','a:28:{s:9:"m_user_id";s:1:"1";s:12:"display_name";s:10:"internetbf";s:5:"level";s:1:"2";s:5:"email";s:20:"internetbf@gmail.com";s:10:"show_email";s:1:"0";s:6:"locale";s:6:"french";s:5:"theme";s:4:"base";s:8:"timezone";s:12:"Europe/Paris";s:6:"editor";s:6:"BBCode";s:9:"unread_pm";s:1:"0";s:10:"posted_msg";s:1:"0";s:17:"registration_date";s:10:"1775419366";s:20:"last_connection_date";s:1:"0";s:11:"user_groups";s:0:"";s:18:"warning_percentage";s:1:"0";s:12:"delay_banned";s:1:"0";s:14:"delay_readonly";s:1:"0";s:7:"user_id";s:1:"1";s:15:"last_view_forum";N;s:10:"user_skype";N;s:9:"user_sign";N;s:19:"register_newsletter";N;s:8:"user_sex";N;s:14:"user_biography";N;s:13:"user_pmtomail";N;s:9:"user_born";N;s:11:"user_avatar";N;s:12:"user_website";N;}','a:0:{}','');
+-- INSERT INTO `phpboost_sessions` (`user_id`, `session_id`, `token`, `timestamp`, `ip`, `location_script`, `location_title`, `cached_data`, `data`, `location_id`) VALUES (-1,'57e3075b871c8136e646c61790a2ced0a022e18f8cfff941f3a3e85151f50834','d914e9af1e933ff3',1775419366,'192.168.1.20','/phpboost/kernel/framework/ajax/user_xmlhttprequest.php','Erreur','a:16:{s:7:"user_id";i:-1;s:12:"display_name";s:7:"visitor";s:5:"level";i:-1;s:5:"email";N;s:10:"show_email";b:0;s:6:"locale";s:6:"french";s:5:"theme";s:4:"base";s:8:"timezone";s:12:"Europe/Paris";s:6:"editor";s:6:"BBCode";s:9:"unread_pm";i:0;s:17:"registration_date";i:0;s:20:"last_connection_date";i:1775419350;s:11:"user_groups";s:0:"";s:18:"warning_percentage";i:0;s:12:"delay_banned";i:0;s:14:"delay_readonly";i:0;}','a:0:{}','');
+-- INSERT INTO `phpboost_sessions` (`user_id`, `session_id`, `token`, `timestamp`, `ip`, `location_script`, `location_title`, `cached_data`, `data`, `location_id`) VALUES (1,'281fcabb255fdb8bc8a1157456dda557acd8a13bb830c39a6c55c8a5654b0c1e','17fe1c1bdf31b3ea',1775419704,'192.168.1.20','/phpboost/database/admin_database.php?action=backup','Gestion des tables','a:28:{s:9:"m_user_id";s:1:"1";s:12:"display_name";s:10:"internetbf";s:5:"level";s:1:"2";s:5:"email";s:20:"internetbf@gmail.com";s:10:"show_email";s:1:"0";s:6:"locale";s:6:"french";s:5:"theme";s:4:"base";s:8:"timezone";s:12:"Europe/Paris";s:6:"editor";s:6:"BBCode";s:9:"unread_pm";s:1:"0";s:10:"posted_msg";s:1:"0";s:17:"registration_date";s:10:"1775419366";s:20:"last_connection_date";s:1:"0";s:11:"user_groups";s:0:"";s:18:"warning_percentage";s:1:"0";s:12:"delay_banned";s:1:"0";s:14:"delay_readonly";s:1:"0";s:7:"user_id";s:1:"1";s:15:"last_view_forum";N;s:10:"user_skype";N;s:9:"user_sign";N;s:19:"register_newsletter";N;s:8:"user_sex";N;s:14:"user_biography";N;s:13:"user_pmtomail";N;s:9:"user_born";N;s:11:"user_avatar";N;s:12:"user_website";N;}','a:0:{}','');
 DROP TABLE IF EXISTS `phpboost_shoutbox`;
 CREATE TABLE `phpboost_shoutbox` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1089,8 +1089,8 @@ CREATE TABLE `phpboost_visit_counter` (
   PRIMARY KEY (`id`),
   KEY `ip` (`ip`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
-INSERT INTO `phpboost_visit_counter` (`id`, `ip`, `time`, `total`) VALUES (1,1,'2026-04-05',1);
-INSERT INTO `phpboost_visit_counter` (`id`, `ip`, `time`, `total`) VALUES (3,'192.168.1.20','2026-04-05',0);
+-- INSERT INTO `phpboost_visit_counter` (`id`, `ip`, `time`, `total`) VALUES (1,1,'2026-04-05',1);
+-- INSERT INTO `phpboost_visit_counter` (`id`, `ip`, `time`, `total`) VALUES (3,'192.168.1.20','2026-04-05',0);
 DROP TABLE IF EXISTS `phpboost_web`;
 CREATE TABLE `phpboost_web` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
