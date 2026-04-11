@@ -37,8 +37,8 @@ ynh_config_add --template="config.php" --destination="$install_dir/kernel/db/con
 
 
 #Populate DATABASE with temp SQL
-# ynh_script_progression "[INSTALL] Populate DATABASE $db_name with temp SQL ..."
-# ynh_mysql_db_shell_binary-mode < ../conf/phpboost_blank_install.sql
+ynh_script_progression "[INSTALL] Populate DATABASE $db_name with temp SQL ..."
+ynh_mysql_db_shell_binary-mode < ../conf/phpboost_blank_install.sql
 
 # RUN PHPBoost CLI Install with PHP
 ynh_script_progression "[INSTALL] RUN the real instalation of $app ..."
