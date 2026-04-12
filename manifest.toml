@@ -65,7 +65,7 @@ ram.runtime = "50M"
 	ask.fr = "L'admin de votre PHPBoost"
     help.fr = "L'utilisateur Administrateur"
     type = "email"
-    default = "admin@$domain"
+    default = "admin@myphpboost.com"
 	
 	[install.phpboost_lang]
     ask.en = "Chose PHPBoost lang"
