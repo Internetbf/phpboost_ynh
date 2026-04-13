@@ -7,7 +7,7 @@ source /usr/share/yunohost/helpers
 # RETRIEVE ARGUMENTS FROM THE MANIFEST
 #=================================================
 
-export phpboost_admin_email=$(ynh_user_get_info --username="$admin" --key="mail")
+export phpboost_admin_email=$(ynh_user_get_info --username="$phpboost_admin" --key="mail")
 
 #=================================================
 # INITIALIZE AND STORE SETTINGS
