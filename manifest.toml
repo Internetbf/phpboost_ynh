@@ -44,20 +44,27 @@ ram.runtime = "50M"
     default = "visitors"
 	
 	[install.phpboost_admin]
-	ask.en = "PhpBoost admin Login"
+	ask.en = "PHPBoost admin Login"
     help.en = "The Admin user"
 	ask.fr = "L'admin de votre PHPBoost"
     help.fr = "L'utilisateur Administrateur"
-    type = "string"
-    default = "Admin"
+	type = "user"
 	
 	[install.phpboost_pwd]
-	ask.en = "PhpBoost admin password"
+	ask.en = "PHPBoost admin password"
     help.en = "The Admin password"
 	ask.fr = "Mot de passe d'administration"
     help.fr = "Le mot de passe de l'Administrateur"
     type = "password"
-    #default = "My_Super_PWD_for_PHPBoost"
+	
+	[install.phpboost_lang]
+    ask.en = "Chose PHPBoost lang"
+    help.en = "Can be change in Admin panel"
+	ask.fr = "Choisissez la langue de PHPBoost"
+    help.fr = "Peut être changé dans l'administration"
+    type = "select"
+    choices.english = "English"
+    choices.french = "Français"
 
 [resources]
 
