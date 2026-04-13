@@ -48,8 +48,7 @@ ram.runtime = "50M"
     help.en = "The Admin user"
 	ask.fr = "L'admin de votre PHPBoost"
     help.fr = "L'utilisateur Administrateur"
-    type = "string"
-    default = "Admin"
+	type = "user"
 	
 	[install.phpboost_pwd]
 	ask.en = "PhpBoost admin password"
@@ -57,15 +56,6 @@ ram.runtime = "50M"
 	ask.fr = "Mot de passe d'administration"
     help.fr = "Le mot de passe de l'Administrateur"
     type = "password"
-    #default = "My_Super_PWD_for_PHPBoost"
-	
-	[install.phpboost_admin_email]
-	ask.en = "PhpBoost admin Login"
-    help.en = "The Admin user"
-	ask.fr = "L'admin de votre PHPBoost"
-    help.fr = "L'utilisateur Administrateur"
-    type = "email"
-    default = "admin@myphpboost.com"
 	
 	[install.phpboost_lang]
     ask.en = "Chose PHPBoost lang"
